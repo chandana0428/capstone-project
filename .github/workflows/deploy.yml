@@ -34,11 +34,11 @@ jobs:
 
     - name: Tag Docker Image
       run: |
-        docker tag capstone-app:latest ${{ secrets.ECR_REPOSITORY }}:latest
+        docker tag capstone-app:latest ${{ steps.login-ecr.outputs.registry }}/capstone-app:latest
 
     - name: Push Docker Image
       run: |
-        docker push ${{ secrets.ECR_REPOSITORY }}:latest
+        docker push ${{ steps.login-ecr.outputs.registry }}/capstone-app:latest
 
     - name: Update kubeconfig
       run: |
