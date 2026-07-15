@@ -23,7 +23,11 @@ jobs:
     - name: Login to Amazon ECR
       id: login-ecr
       uses: aws-actions/amazon-ecr-login@v2
-
+      
+    - name: Debug ECR
+      run: |
+        echo "Registry: ${{ steps.login-ecr.outputs.registry }}"
+        echo "Repository: ${{ secrets.ECR_REPOSITORY }}"
     - name: Build Docker Image
       run: |
         docker build -t capstone-app ./app
