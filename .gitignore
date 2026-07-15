@@ -1,0 +1,13 @@
+cd ~/capstone-project# Terraform
+terraform/.terraform/
+terraform/.terraform.lock.hcl
+terraform/*.tfstate
+terraform/*.tfstate.*
+terraform/crash.log
+
+# Python
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
