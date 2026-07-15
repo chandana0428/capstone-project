@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: capstone-app
-        image: 515917620428.dkr.ecr.us-east-2.amazonaws.com/capstone-app:v2
+        image: 515917620428.dkr.ecr.us-east-2.amazonaws.com/capstone-app:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
